@@ -1,0 +1,14 @@
+/*.card-block, .card-header {
+    padding: .6rem !important;
+}*/
+.container {
+    width: 450px;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+}
+
+.summary-header {
+    border-bottom: 1px solid black;
+}
