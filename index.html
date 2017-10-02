@@ -7,68 +7,75 @@
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-    <!--Bootstrap JS-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+	  <a class="navbar-brand" href="#">Cheech's Pizza</a>
+	</nav>
+		
+    <div class="container">	
         <!-- Order Form -->
-        <form>
-            <!--Order Details-->
-            <div class="card">
-                <h5 class="card-header bg-primary text-white">Order Details</h5>
-                <div class="card-block row">
-                    <div class="form-group col-8">
-                        <label for="order-form-item">Item</label>
-                        <select id="order-form-item" class="form-control">
-                            <option>$7.95 Cheese Pizza</option>
-                        </select>
-                    </div>
+        <form class="row my-5"> <!-- Form is also a layout row. -->
+			<div class="col-lg-7">
+			
+				<!--Order Details-->
+				<div class="card">
+					<h5 class="card-header bg-faded">Order Details</h5>
+					<div class="card-block row">
+						<div class="form-group col-10">
+							<label for="order-form-item">Item</label>
+							<select id="order-form-item" class="form-control"></select>
+						</div>
 
-                    <div class="col-1">
-                        <p></p>
-                    </div>
+						<div class="form-group col-2">
+							<label for="order-form-quantity">Quantity</label>
+							<select id="order-form-quantity" class="form-control"></select>
+						</div>
+					</div>
+				</div>
 
-                    <div class="form-group col-3">
-                        <label for="order-form-quantity">Item</label>
-                        <select id="order-form-quantity" class="form-control">
-                            <option>1</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+				<!--Contact Information -->
+				<div class="card my-3"> <!-- Inner form spacing mostly here -->
+					<h5 class="card-header bg-faded">Contact Information</h5>
+					<div class="card-block form-group">
+						<label for="order-form-name">First and Last Name</label>
+						<input id="order-form-name" type="text" placeholder="John Smith" class="form-control">
 
-            <!--Contact Infor-->
-            <div class="card">
-                <h5 class="card-header bg-primary text-white">Contact Information</h5>
-                <div class="card-block form-group">
-                    <label for="order-form-name">First and Last Name</label>
-                    <input id="order-form-name" type="text" placeholder="John Smith" class="form-control">
-
-                    <label for="order-form-phone">Phone #</label>
-                    <input id="order-form-phone" type="text" placeholder="4178675309" class="form-control">
-                </div>
-            </div>
+						<label for="order-form-phone">Phone #</label>
+						<input id="order-form-phone" type="text" placeholder="(417)867-5309" class="form-control">
+					</div>
+				</div>
+				
+				<!--Order Button-->
+				<p id="order-form-order" class="btn btn-success">Order Now</p>
+				
+			</div> <!-- End of col-lg-8 -->
 
             <!--Order Summary-->
-            <div class="card">
-                <h5 class="card-header bg-info text-white">Order Summary</h5>
-                <div class="card-block form-group">
-                    <h6 class="summary-header"><strong>Contact</strong></h6>
-                    <p>Sam Wilson @ (417) 860 - 5584</p>
-                    <h6 class="summary-header"><strong>Items</strong></h6>
-                    <p>$7.95 Cheese Pizza (x2)</p>
-                    <h6 class="summary-header"><strong>Bill</strong></h6>
-                    <p>Bill goes here.</p>
-
-                </div>
-            </div>
-
+			<div class="col-lg-5">
+				<div id="summary" class="card">
+					<h5 class="card-header bg-faded">Order Summary</h5>
+					<div class="card-block form-group">
+						<p id="summary-hider-header">Nothing here yet.</p>
+						<div id="summary-hider">
+							<h6 class="summary-header"><strong>Contact</strong></h6>
+							<p id="summary-contact"></p>
+							<h6 class="summary-header"><strong>Items</strong></h6>
+							<p id="summary-items"></p>
+							<h6 class="summary-header"><strong>Bill</strong></h6>
+							<div id="summary-bill-holder"></div>
+						</div>
+					</div>
+				</div>
+			</div>
         </form>
     </div>
+	
+	<script src="code.js"></script>
 </body>
 
 </html>

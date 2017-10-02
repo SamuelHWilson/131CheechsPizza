@@ -1,14 +1,30 @@
-/*.card-block, .card-header {
-    padding: .6rem !important;
-}*/
-.container {
-    width: 450px;
+body {
+	background-image: url(img/Checker1.png);
 }
 
+.navbar {
+	box-shadow: 3px 3px 7px #0d0d0d;
+}
+.navbar a, .navbar li{
+	display: inline-block;
+}
+
+/* === Form Stuff === */
 .card {
-    margin-bottom: 1.5rem;
+	border: none;
+	box-shadow: 3px 3px 7px #0d0d0d;
+}
+#order-form-order {
+	box-shadow: 3px 3px 7px #0d0d0d;
 }
 
+/* Summary Stuff */
+#summary {
+	height: 100%;
+}
+#summary-hider {
+	display: none;
+}
 .summary-header {
     border-bottom: 1px solid black;
 }
